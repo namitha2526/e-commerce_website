@@ -3,97 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Menu</title>
-    <link rel="style.css" href="css/style.css">
+    <title>5-Star Hotel Menu</title>
+    <link rel="style" href="css/style.css">
     <script src="js/script.js"></script>
-    <img src="images/dish.jpg" alt="Dish">
-
+    <img src="image/dish.jpg" alt="dish">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to Our 5-Star Hotel</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </header>
-    <section id="home">
-        <h1>Welcome to Our Hotel</h1>
-        <p>Experience luxury dining with us.</p>
+
+    <section id="menu" class="menu-section">
+        <h2>Our 5-Star Menu</h2>
+        <div class="menu-container">
+            <!-- Appetizers -->
+            <div class="menu-category">
+                <h3>Starters</h3>
+                <div class="menu-item" data-detail="Crispy deep-fried golden brown samosas filled with a spicy potato mixture.">
+                    <img src="images/samosa.jpg" alt="Samosa">
+                    <div class="menu-details">
+                        <h4>Samosa</h4>
+                        <p>Crispy deep-fried snack with a spicy potato filling.</p>
+                        <p><strong>₹50</strong></p>
+                    </div>
+                </div>
+                <div class="menu-item" data-detail="Delicious golden-brown pakoras made with a gram flour batter and spices.">
+                    <img src="images/pakora.jpg" alt="Pakora">
+                    <div class="menu-details">
+                        <h4>Pakora</h4>
+                        <p>Gram flour fritters seasoned with Indian spices.</p>
+                        <p><strong>₹80</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Courses -->
+            <div class="menu-category">
+                <h3>Main Courses</h3>
+                <div class="menu-item" data-detail="Rich butter chicken cooked in a creamy tomato-based curry with Indian spices.">
+                    <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+                    <div class="menu-details">
+                        <h4>Butter Chicken</h4>
+                        <p>Rich creamy chicken curry cooked with butter and spices.</p>
+                        <p><strong>₹350</strong></p>
+                    </div>
+                </div>
+                <div class="menu-item" data-detail="Aromatic biryani rice cooked with basmati, spices, and tender mutton.">
+                    <img src="images/mutton-biryani.jpg" alt="Mutton Biryani">
+                    <div class="menu-details">
+                        <h4>Mutton Biryani</h4>
+                        <p>Flavored basmati rice with tender mutton pieces and spices.</p>
+                        <p><strong>₹400</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Desserts -->
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <div class="menu-item" data-detail="Soft and spongy gulab jamuns soaked in sugar syrup flavored with cardamom.">
+                    <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
+                    <div class="menu-details">
+                        <h4>Gulab Jamun</h4>
+                        <p>Soft dumplings soaked in sugar syrup.</p>
+                        <p><strong>₹120</strong></p>
+                    </div>
+                </div>
+                <div class="menu-item" data-detail="Classic Indian dessert made from condensed milk and sugar, served with saffron and cardamom.">
+                    <img src="images/kheer.jpg" alt="Kheer">
+                    <div class="menu-details">
+                        <h4>Kheer</h4>
+                        <p>Rice pudding flavored with saffron and cardamom.</p>
+                        <p><strong>₹100</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="menu">
-      <section id="menu" class="menu-section">
-    <h2>Our 5-Star Menu</h2>
-    <div class="menu-container">
-        <!-- Appetizers -->
-        <div class="menu-category">
-            <h3>Appetizers</h3>
-            <div class="menu-item">
-                <img src="images/bruschetta.jpg" alt="Bruschetta">
-                <div class="menu-details">
-                    <h4>Bruschetta</h4>
-                    <p>Grilled bread topped with fresh tomatoes, garlic, and basil.</p>
-                    <p><strong>$12.00</strong></p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <img src="images/soup.jpg" alt="Soup of the Day">
-                <div class="menu-details">
-                    <h4>Soup of the Day</h4>
-                    <p>A hearty soup made from seasonal ingredients.</p>
-                    <p><strong>$8.00</strong></p>
-                </div>
-            </div>
-        </div>
-        <!-- Main Courses -->
-        <div class="menu-category">
-            <h3>Main Courses</h3>
-            <div class="menu-item">
-                <img src="images/steak.jpg" alt="Grilled Steak">
-                <div class="menu-details">
-                    <h4>Grilled Steak</h4>
-                    <p>Perfectly seasoned steak served with herb butter.</p>
-                    <p><strong>$25.00</strong></p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <img src="images/pasta.jpg" alt="Pasta Primavera">
-                <div class="menu-details">
-                    <h4>Pasta Primavera</h4>
-                    <p>Fresh vegetables tossed in a creamy Alfredo sauce.</p>
-                    <p><strong>$18.00</strong></p>
-                </div>
-            </div>
-        </div>
-        <!-- Desserts -->
-        <div class="menu-category">
-            <h3>Desserts</h3>
-            <div class="menu-item">
-                <img src="images/cheesecake.jpg" alt="Cheesecake">
-                <div class="menu-details">
-                    <h4>Cheesecake</h4>
-                    <p>Rich and creamy cheesecake with a graham cracker crust.</p>
-                    <p><strong>$7.00</strong></p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <img src="images/chocolate.jpg" alt="Chocolate Fondant">
-                <div class="menu-details">
-                    <h4>Chocolate Fondant</h4>
-                    <p>Warm molten chocolate cake with vanilla ice cream.</p>
-                    <p><strong>$9.00</strong></p>
-                </div>
-            </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4 id="modal-title">Dish Name</h4>
+            <img id="modal-image" src="" alt="Dish Image">
+            <p id="modal-description">Dish description goes here.</p>
+            <p id="modal-price"><strong>Price: ₹0.00</strong></p>
         </div>
     </div>
-</section>
-    <footer>
-        <p>Contact us at: hotel@example.com</p>
-        <p>Follow us on social media</p>
-    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
