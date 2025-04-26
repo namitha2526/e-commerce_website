@@ -1,98 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5-Star Hotel Menu</title>
-    <link rel="style.css" href="style.css">
-    <script src="script.js"></script>
-    <img src="https://th.bing.com/th/id/OIP.SXCxCP3aFb6YMawhROcP-QAAAA?rs=1&pid=ImgDetMain" alt="dish">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShadowStore</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our 5-Star Hotel</h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
 
-    <section id="menu" class="menu-section">
-        <h2>Our 5-Star Menu</h2>
-        <div class="menu-container">
-            <!-- Appetizers -->
-            <div class="menu-category">
-                <h3>Starters</h3>
-                <div class="menu-item" data-detail="Crispy deep-fried golden brown samosas filled with a spicy potato mixture.">
-                    <img src="https://foodiemag.co.za/wp-content/uploads/2023/06/deep-fried-samosas-dumplings-gourmet-appetizer-generated-by-ai-1-scaled.jpg" alt="Samosa">
-                    <div class="menu-details">
-                        <h4>Samosa</h4>
-                        <p>Crispy deep-fried snack with a spicy potato filling.</p>
-                        <p><strong>₹50</strong></p>
-                    </div>
-                </div>
-                <div class="menu-item" data-detail="Delicious golden-brown pakoras made with a gram flour batter and spices.">
-                    <img src="https://th.bing.com/th/id/OIP.ORnAfLp3L4SB22c2k8hHewHaE8?rs=1&pid=ImgDetMain" alt="Pakora">
-                    <div class="menu-details">
-                        <h4>Pakora</h4>
-                        <p>Gram flour fritters seasoned with Indian spices.</p>
-                        <p><strong>₹80</strong></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Main Courses -->
-            <div class="menu-category">
-                <h3>Main Courses</h3>
-                <div class="menu-item" data-detail="Rich butter chicken cooked in a creamy tomato-based curry with Indian spices.">
-                    <img src="https://www.wellplated.com/wp-content/uploads/2019/07/Authentic-Indian-Butter-Chicken-recipe.jpg" alt="Butter Chicken">
-                    <div class="menu-details">
-                        <h4>Butter Chicken</h4>
-                        <p>Rich creamy chicken curry cooked with butter and spices.</p>
-                        <p><strong>₹350</strong></p>
-                    </div>
-                </div>
-                <div class="menu-item" data-detail="Aromatic biryani rice cooked with basmati, spices, and tender mutton.">
-                    <img src="https://www.licious.in/blog/wp-content/uploads/2022/06/mutton-hyderabadi-biryani-01-750x750.jpg" alt="Mutton Biryani">
-                    <div class="menu-details">
-                        <h4>Mutton Biryani</h4>
-                        <p>Flavored basmati rice with tender mutton pieces and spices.</p>
-                        <p><strong>₹400</strong></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Desserts -->
-            <div class="menu-category">
-                <h3>Desserts</h3>
-                <div class="menu-item" data-detail="Soft and spongy gulab jamuns soaked in sugar syrup flavored with cardamom.">
-                    <img src="https://www.sailusfood.com/wp-content/uploads/2016/03/bread-gulab-jamun.jpg" alt="Gulab Jamun">
-                    <div class="menu-details">
-                        <h4>Gulab Jamun</h4>
-                        <p>Soft dumplings soaked in sugar syrup.</p>
-                        <p><strong>₹120</strong></p>
-                    </div>
-                </div>
-                <div class="menu-item" data-detail="Classic Indian dessert made from condensed milk and sugar, served with saffron and cardamom.">
-                    <img src="https://i0.wp.com/www.honeywhatscooking.com/wp-content/uploads/2020/10/Rice-Kheer-Indian-Rice-Pudding44.jpg?w=1536&ssl=1" alt="Kheer">
-                    <div class="menu-details">
-                        <h4>Kheer</h4>
-                        <p>Rice pudding flavored with saffron and cardamom.</p>
-                        <p><strong>₹100</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <header>
+    <h1>ShadowStore</h1>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h4 id="modal-title">Dish Name</h4>
-            <img id="modal-image" src="https://th.bing.com/th/id/OIP.B8Kthq8-0IEBQXaNa0rRAgHaEJ?rs=1&pid=ImgDetMain" alt="Dish Image">
-            <p id="modal-description">Dish description goes here.</p>
-            <p id="modal-price"><strong>Price: ₹0.00</strong></p>
-        </div>
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search products...">
+
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+      </select>
+
+      <select id="sortPrice">
+        <option value="default">Sort By</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </select>
     </div>
+  </header>
+    <main id="product-list">
+  <!-- Electronics -->
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?smartphone" alt="Phone">
+    <h3>Smartphone</h3>
+    <p>Category: Electronics</p>
+    <p>Price: $499</p>
+    <button class="add-cart" onclick="addToCart(1)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?laptop" alt="Laptop">
+    <h3>Laptop</h3>
+    <p>Category: Electronics</p>
+    <p>Price: $1099</p>
+    <button class="add-cart" onclick="addToCart(2)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?headphones" alt="Headphones">
+    <h3>Wireless Headphones</h3>
+    <p>Category: Electronics</p>
+    <p>Price: $199</p>
+    <button class="add-cart" onclick="addToCart(3)">Add to Bag</button>
+  </div>
+
+  <!-- Fashion -->
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?tshirt" alt="T-shirt">
+    <h3>T-shirt</h3>
+    <p>Category: Fashion</p>
+    <p>Price: $25</p>
+    <button class="add-cart" onclick="addToCart(4)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?jeans" alt="Jeans">
+    <h3>Blue Jeans</h3>
+    <p>Category: Fashion</p>
+    <p>Price: $45</p>
+    <button class="add-cart" onclick="addToCart(5)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?leather-jacket" alt="Jacket">
+    <h3>Leather Jacket</h3>
+    <p>Category: Fashion</p>
+    <p>Price: $120</p>
+    <button class="add-cart" onclick="addToCart(6)">Add to Bag</button>
+  </div>
+
+  <!-- Accessories -->
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?watch" alt="Watch">
+    <h3>Wrist Watch</h3>
+    <p>Category: Accessories</p>
+    <p>Price: $80</p>
+    <button class="add-cart" onclick="addToCart(7)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?sunglasses" alt="Sunglasses">
+    <h3>Sunglasses</h3>
+    <p>Category: Accessories</p>
+    <p>Price: $40</p>
+    <button class="add-cart" onclick="addToCart(8)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?backpack" alt="Backpack">
+    <h3>Backpack</h3>
+    <p>Category: Accessories</p>
+    <p>Price: $60</p>
+    <button class="add-cart" onclick="addToCart(9)">Add to Bag</button>
+  </div>
+
+  <!-- Home Appliances -->
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?microwave" alt="Microwave">
+    <h3>Microwave Oven</h3>
+    <p>Category: Home</p>
+    <p>Price: $150</p>
+    <button class="add-cart" onclick="addToCart(10)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?blender" alt="Blender">
+    <h3>Blender</h3>
+    <p>Category: Home</p>
+    <p>Price: $55</p>
+    <button class="add-cart" onclick="addToCart(11)">Add to Bag</button>
+  </div>
+
+  <div class="product">
+    <img src="https://source.unsplash.com/featured/?vacuum" alt="Vacuum Cleaner">
+    <h3>Vacuum Cleaner</h3>
+    <p>Category: Home</p>
+    <p>Price: $180</p>
+    <button class="add-cart" onclick="addToCart(12)">Add to Bag</button>
+  </div>
+</main>
+
+
+  <footer>
+    <button id="checkoutButton">Checkout (<span id="cart-count">0</span>)</button>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
