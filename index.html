@@ -26,6 +26,18 @@
         <option value="high-low">Price: High to Low</option>
       </select>
     </div>
+    <div id="cart-display">
+  🛒 Cart (<span id="cart-count">0</span>)
+  <ul id="cart-items"></ul>
+</div>
+<button onclick="filterByCategory('All')">All</button>
+<button onclick="filterByCategory('Electronics')">Electronics</button>
+<button onclick="filterByCategory('Fashion')">Fashion</button>
+<!-- etc... -->
+
+<button onclick="sortByPrice('asc')">Sort: Low to High</button>
+<button onclick="sortByPrice('desc')">Sort: High to Low</button>
+
   </header>
     <main id="product-list">
   <!-- Electronics -->
