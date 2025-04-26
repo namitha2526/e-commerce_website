@@ -1,20 +1,49 @@
+// Product list
 const products = [
-  { id: 1, name: "Phone", category: "electronics", price: 500 },
-  { id: 2, name: "Laptop", category: "electronics", price: 1500 },
-  { id: 3, name: "T-shirt", category: "fashion", price: 30 },
-  { id: 4, name: "Jeans", category: "fashion", price: 60 },
-  { id: 5, name: "Smartwatch", category: "electronics", price: 200 },
-  { id: 6, name: "Jacket", category: "fashion", price: 120 }
+  { id: 1, name: "Smartphone", price: 499, image: "https://source.unsplash.com/featured/?smartphone" },
+  { id: 2, name: "Laptop", price: 1099, image: "https://source.unsplash.com/featured/?laptop" },
+  { id: 3, name: "Wireless Headphones", price: 199, image: "https://source.unsplash.com/featured/?headphones" },
+  { id: 4, name: "T-shirt", price: 25, image: "https://source.unsplash.com/featured/?tshirt" },
+  { id: 5, name: "Blue Jeans", price: 45, image: "https://source.unsplash.com/featured/?jeans" },
+  { id: 6, name: "Leather Jacket", price: 120, image: "https://source.unsplash.com/featured/?leather-jacket" },
+  { id: 7, name: "Wrist Watch", price: 80, image: "https://source.unsplash.com/featured/?watch" },
+  { id: 8, name: "Sunglasses", price: 40, image: "https://source.unsplash.com/featured/?sunglasses" },
+  { id: 9, name: "Backpack", price: 60, image: "https://source.unsplash.com/featured/?backpack" },
+  { id: 10, name: "Microwave Oven", price: 150, image: "https://source.unsplash.com/featured/?microwave" },
+  { id: 11, name: "Blender", price: 55, image: "https://source.unsplash.com/featured/?blender" },
+  { id: 12, name: "Vacuum Cleaner", price: 180, image: "https://source.unsplash.com/featured/?vacuum" }
 ];
 
-let cart = [];
+// Cart array
+const cart = [];
 
-const productList = document.getElementById('product-list');
-const categoryFilter = document.getElementById('categoryFilter');
-const sortPrice = document.getElementById('sortPrice');
-const searchInput = document.getElementById('searchInput');
-const checkoutButton = document.getElementById('checkoutButton');
-const cartCount = document.getElementById('cart-count');
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (product) {
+    cart.push(product);
+    alert(`${product.name} added to cart!`);
+    updateCartDisplay();
+  }
+}
+
+function updateCartDisplay() {
+  const count = document.getElementById("cart-count");
+  const items = document.getElementById("cart-items");
+  if (count) count.textContent = cart.length;
+  if (items) {
+    items.innerHTML = "";
+    let total = 0;
+    cart.forEach(p => {
+      total += p.price;
+      const li = document.createElement("li");
+      li.textContent = `${p.name} - $${p.price}`;
+      items.appendChild(li);
+    });
+    const totalLi = document.createElement("li");
+    totalLi.innerHTML = `<strong>Total: $${total}</strong>`;
+    items.appendChild(totalLi);
+  }
+}
 
 // Display products
 function displayProducts(productArray) {
