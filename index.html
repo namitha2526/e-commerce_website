@@ -73,8 +73,10 @@
       <a href="#">Home</a>
       <a href="#">Products</a>
       <a href="#">Contact</a>
-      <a href="#">Cart (<span id="cart-count">0</span>)</a>
     </nav>
+     <a href="#">Cart (<span id="cart-count">0</span>)</a>
+    <button onclick="removeFromCart(${item.id})">Remove</button>
+
   </header>
   <main>
     <div class="cart" id="cart">
@@ -202,6 +204,10 @@
         updateCart();
       }
     }
+    function removeFromCart(productId) {
+  cart = cart.filter(item => item.id !== productId);
+  displayCart();
+}
 
     function updateCart() {
       cartItems.innerHTML = '';
