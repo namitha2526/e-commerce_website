@@ -56,7 +56,7 @@
       margin-bottom: 1rem;
     }
     .cart {
-      position: down;
+      position: fixed;
       top: 1rem;
       right: 1rem;
       background-color: #fff;
@@ -64,6 +64,15 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+    select {
+  transition: all 0.3s ease;
+}
+
+.controls-container:hover .filter-section,
+.controls-container:hover .sort-section {
+  transform: translateY(-2px);
+}
+
   </style>
 </head>
 <body>
@@ -84,19 +93,28 @@
     <h3>Cart</h3>
     <ul id="cart-items"></ul>
   </div>
-    <div class="filters">
-      <select id="categoryFilter">
-        <option value="all">All Categories</option>
-        <option value="electronics">Electronics</option>
-        <option value="clothing">Clothing</option>
-        <option value="accessories">Accessories</option>
-      </select>
-      <select id="sortFilter">
-        <option value="default">Sort by</option>
-        <option value="priceAsc">Price: Low to High</option>
-        <option value="priceDesc">Price: High to Low</option>
-      </select>
-    </div>
+   <div class="controls-container">
+  <div class="filter-section">
+    <h3>Filter by Category</h3>
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="All">All</option>
+      <option value="electronics">Electronic</option>
+      <option value="clothing">Clothing</option>
+      <option value="accessories">Accessories</option>
+      <option value="kitchen">Kitchen</option>
+    </select>
+  </div>
+
+  <div class="sort-section">
+    <h3>Sort Products</h3>
+    <select id="sortOptions" onchange="sortProducts()">
+      <option value="default">Default</option>
+      <option value="priceLowHigh">Price: Low to High</option>
+      <option value="priceHighLow">Price: High to Low</option>
+    </select>
+  </div>
+</div>
+
     <div class="product-list" id="product-list">
       <!-- Products will be injected here -->
     </div>
@@ -173,6 +191,13 @@
     category: "accessories",
     price: 25,
     image: "https://th.bing.com/th/id/OIP.FQifUYUTlvbFTglMPRL4BwHaE7?cb=iwc1&rs=1&pid=ImgDetMain"
+  },
+       {
+    id: 11,
+    name: "micro wave",
+    category: "kitchen",
+    price: 25,
+    image: "https://th.bing.com/th/id/OIP.kMtsBqTjwDdrxZAogxGAdwHaF-?cb=iwc1&rs=1&pid=ImgDetMain"
   }
 ];
 
