@@ -1,17 +1,17 @@
 // Product list
 const products = [
   { id: 1, name: "Smartphone", price: 499, image: "https://th.bing.com/th/id/OIP.aOtvQFMD7a9yN4e-ltjHQwHaHa?cb=iwc1&rs=1&pid=ImgDetMain" },
-  { id: 2, name: "Laptop", price: 1099, image: "https://source.unsplash.com/featured/?laptop" },
-  { id: 3, name: "Wireless Headphones", price: 199, image: "https://source.unsplash.com/featured/?headphones" },
-  { id: 4, name: "T-shirt", price: 25, image: "https://source.unsplash.com/featured/?tshirt" },
-  { id: 5, name: "Blue Jeans", price: 45, image: "https://source.unsplash.com/featured/?jeans" },
-  { id: 6, name: "Leather Jacket", price: 120, image: "https://source.unsplash.com/featured/?leather-jacket" },
-  { id: 7, name: "Wrist Watch", price: 80, image: "https://source.unsplash.com/featured/?watch" },
-  { id: 8, name: "Sunglasses", price: 40, image: "https://source.unsplash.com/featured/?sunglasses" },
-  { id: 9, name: "Backpack", price: 60, image: "https://source.unsplash.com/featured/?backpack" },
-  { id: 10, name: "Microwave Oven", price: 150, image: "https://source.unsplash.com/featured/?microwave" },
-  { id: 11, name: "Blender", price: 55, image: "https://source.unsplash.com/featured/?blender" },
-  { id: 12, name: "Vacuum Cleaner", price: 180, image: "https://source.unsplash.com/featured/?vacuum" }
+  { id: 2, name: "Laptop", price: 1099, image: "https://th.bing.com/th/id/OIP.zcgnnK53CMk_jlTpAKWoOgHaFj?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 3, name: "Wireless Headphones", price: 199, image: "https://th.bing.com/th/id/OIP.roexZDqmHUg0Pbg93YYAUAAAAA?cb=iwc1&w=474&h=474&rs=1&pid=ImgDetMain" },
+  { id: 4, name: "T-shirt", price: 25, image: "https://th.bing.com/th/id/OIP.SP6_wTwSu3LZ1HEukrQfGAHaG7?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 5, name: "Blue Jeans", price: 45, image: "https://th.bing.com/th/id/OIP.jsJVcgxxoyAJH6TqNDqv0wHaLW?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 6, name: "Leather Jacket", price: 120, image: "https://th.bing.com/th/id/OIP.QrDyKAExrETmRHrP5vKC7AHaKX?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 7, name: "Wrist Watch", price: 80, image: "https://th.bing.com/th/id/OIP.ae5IpspGr82fl-VE9jJomAHaHa?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 8, name: "Sunglasses", price: 40, image: "https://th.bing.com/th/id/OIP.FQifUYUTlvbFTglMPRL4BwHaE7?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 9, name: "Backpack", price: 60, image: "https://th.bing.com/th/id/OIP.YZa-NYfGwMtyfSPEKWPI7AHaJQ?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 10, name: "Microwave Oven", price: 150, image: "https://th.bing.com/th/id/OIP.kMtsBqTjwDdrxZAogxGAdwHaF-?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 11, name: "Blender", price: 55, image: "https://th.bing.com/th/id/OIP.f21TJ15r0eTfCc_-Ij2orgHaI8?cb=iwc1&rs=1&pid=ImgDetMain" },
+  { id: 12, name: "Vacuum Cleaner", price: 180, image: "https://th.bing.com/th/id/OIP.yeoHwizqGAdHlCuUoDLB5QHaHa?cb=iwc1&w=1920&h=1920&rs=1&pid=ImgDetMain" }
 ];
 
 // Cart array
