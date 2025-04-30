@@ -1,6 +1,6 @@
 // Product list
 const products = [
-  { id: 1, name: "Smartphone", price: 499, image: "https://source.unsplash.com/featured/?smartphone" },
+  { id: 1, name: "Smartphone", price: 499, image: "https://th.bing.com/th/id/OIP.aOtvQFMD7a9yN4e-ltjHQwHaHa?cb=iwc1&rs=1&pid=ImgDetMain" },
   { id: 2, name: "Laptop", price: 1099, image: "https://source.unsplash.com/featured/?laptop" },
   { id: 3, name: "Wireless Headphones", price: 199, image: "https://source.unsplash.com/featured/?headphones" },
   { id: 4, name: "T-shirt", price: 25, image: "https://source.unsplash.com/featured/?tshirt" },
